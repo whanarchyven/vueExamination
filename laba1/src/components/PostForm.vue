@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent>
-    <my-input v-model="post.title" type="text" placeholder="Название" />
+    <my-input v-model="post.title" v-focus type="text" placeholder="Название" />
     <my-input v-model="post.body" type="text" placeholder="Описание"/>
     <my-button @click="createPost">Добавить пост </my-button>
   </form>
