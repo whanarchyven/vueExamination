@@ -1,26 +1,20 @@
-import Main from "@/pages/Main";
+// import Main from "@/pages/Main";
 import {createRouter, createWebHistory} from "vue-router"
-import PostPage from "@/pages/PostPage";
-import About from "@/pages/About";
-import AlonePostPage from "@/pages/AlonePostPage";
+// import PostPage from "@/pages/PostPage";
+//import About from "@/pages/About";
+// import AlonePostPage from "@/pages/AlonePostPage";
 import PostPageWithStorage from "@/pages/PostPageWithStorage";
+import DromMain from "../pages/Exam/DromMain";
+import DromAbout from "../pages/Exam/DromAbout";
 
 const routes = [
   {
     path: "/",
-    component: Main,
-  },
-  {
-    path: "/posts",
-    component: PostPage,
+    component: DromMain,
   },
   {
     path: "/about",
-    component: About,
-  },
-  {
-    path: "/posts/:id",
-    component: AlonePostPage,
+    component: DromAbout,
   },
   {
     path: "/store",

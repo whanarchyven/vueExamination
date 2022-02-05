@@ -1,14 +1,21 @@
 <template>
-  <navbar v-model:menu-items="menuItems"></navbar>
+
   <div class="app">
-    <router-view style="margin-top: 100px"></router-view>
+    <drom-headder></drom-headder>
+    <drom-side-panel></drom-side-panel>
+    <div class="content-screen">
+      <router-view style="margin-top: 100px"></router-view>
+    </div>
+
   </div>
 </template>
 
 <script>
-import Navbar from "@/components/UI/Navbar";
+//import Navbar from "@/components/UI/Navbar";
+import DromHeadder from "./pages/Exam/DromHeadder";
+import DromSidePanel from "./pages/Exam/DromSidePanel";
 export default {
-  components: {Navbar},
+  components: {DromSidePanel, DromHeadder},
   data(){
     return{
       menuItems:[
@@ -30,7 +37,11 @@ export default {
   padding: 0;
 
 }
-
+.content-screen{
+  display: inline-block;
+  width: 60%;
+  padding: 15px;
+}
 #app{
   padding: 20px;
 }
