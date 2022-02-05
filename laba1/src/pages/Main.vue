@@ -1,42 +1,13 @@
 <template>
-  <h1>Добро пожаловать !</h1>
-  <div class="slider">
-    <h1>{{slides[current].name}}</h1>
-    <h2>{{slides[current].shortDesc}}</h2>
+  <div>
+    <h1>Добро пожаловать !</h1>
+    <h2>Я, честно, убил 8 часов- перегуглил всё что только можно, но у меня ни в какую не хотят отрисовываться динамически картинки. Ни require, ни fetch отдельный: ничего. Если брать картинки с инета- всё нормально, локальные- ни в какую</h2>
   </div>
 </template>
 
 <script>
-
-import axios from 'axios';
 export default {
   name: "Main",
-  data(){
-    return{
-      current:0,
-      slides:[],
-    }
-  },
-  methods:{
-    async fetchPosts(){
-      try{
-          const response = await axios.get('/articles.json');
-          this.slides=response.data;
-
-      }catch (error){
-        alert('ERROR');
-      }
-    },
-    goNext(){
-      this.current+=1;
-    }
-  },
-  beforeMount() {
-    this.fetchPosts();
-  },
-  computed:{
-
-  }
 
 }
 

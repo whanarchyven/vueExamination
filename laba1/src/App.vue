@@ -14,8 +14,8 @@ export default {
       menuItems:[
         {id:1, name:"Main",route:"/"},
         {id:2, name:"About",route:"/about"},
-        {id:3, name:"News",route:"/posts"},
-        {id:4, name:"VueX",route:"/store"}
+        {id:3, name:"News",route:"/store"},
+
       ]
     }
   }
